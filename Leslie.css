@@ -20,7 +20,7 @@ body::after {
     height: 350px;
 
 
-    background-image: url("images/TEDDY.jpg");
+    background-image: url("Images/TEDDY.jpg");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: contain;
