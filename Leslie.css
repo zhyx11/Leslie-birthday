@@ -1,0 +1,688 @@
+/* ================= GENERAL ================= */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* ================= TEDDY BACKGROUND ================= */
+
+body::after {
+    content: "";
+    position: fixed;
+
+
+    right: 20px;
+    bottom: 0;
+
+
+    width: 350px;
+    height: 350px;
+
+
+    background-image: url("images/TEDDY.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+
+
+    pointer-events: none;
+
+
+    /* Teddy stays BEHIND the website */
+    z-index: 0;
+}
+
+
+
+
+/* ================= KEEP WEBSITE IN FRONT ================= */
+
+
+.navbar,
+.profile,
+.title-section,
+.welcome,
+.birthday,
+.content,
+.about,
+.family,
+.contact,
+footer {
+    position: relative;
+    z-index: 1;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+
+
+    background: linear-gradient(
+        135deg,
+        #9fc9ff,
+        #dcecff,
+        #fff1a8
+    );
+
+
+    min-height: 100vh;
+}
+/* ================= NAVBAR ================= */
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 20px;
+}
+
+
+.navbar nav {
+    width: 100%;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+
+.nav-links a {
+    color: #53658d;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #9b7b7b;
+}
+
+
+
+
+/* ================= PROFILE ================= */
+
+
+.profile {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+
+
+
+/* ================= PROFILE IMAGE ================= */
+
+
+.profile-image {
+    width: 360px;
+    height: 420px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid #cfc3b2;
+    background: #fffdf8;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+
+
+
+/* ================= PROFILE INTRODUCTION ================= */
+
+
+.profile-introduction {
+    flex: 1;
+    max-width: 580px;
+}
+
+
+.profile-introduction h1 {
+    margin: 0 0 10px;
+    font-size: 42px;
+    color: #53658d;
+}
+
+
+.profile-introduction h2 {
+    margin: 0 0 25px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #777;
+}
+
+
+.profile-introduction p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+
+
+
+/* ================= TITLE ================= */
+
+
+.title-section {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.title-section h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #53658d;
+}
+
+
+.subtitle {
+    font-size: 17px;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+
+
+/* ================= WELCOME ================= */
+
+
+.welcome {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+
+.welcome h2 {
+    color: #53658d;
+    margin-bottom: 20px;
+}
+
+
+.welcome p {
+    line-height: 1.8;
+}
+
+
+
+
+/* ================= BIRTHDAY ================= */
+
+
+.birthday {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    background: #fffdf8;
+    border: 1px solid #d8cdbf;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.birthday h2 {
+    text-align: center;
+    color: #53658d;
+    margin-bottom: 25px;
+}
+
+
+.birthday p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+
+
+/* ================= CONTENT ================= */
+
+
+.content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+
+.content > h2 {
+    text-align: center;
+    color: #53658d;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+
+
+
+/* ================= CATEGORY GRID ================= */
+
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+
+
+
+/* ================= CARD ================= */
+
+
+.card {
+    min-height: 390px;
+    padding: 20px;
+    text-align: center;
+    background: #fffdf8;
+    border: 1px solid #cfc3b2;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+/* ================= CARD IMAGES ================= */
+
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+
+
+
+/* ================= EMPTY CARD ================= */
+
+
+.empty-card {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+
+.empty-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+
+/* ================= CARD TEXT ================= */
+
+
+.card h3 {
+    font-size: 23px;
+    margin: 15px 0 8px;
+    color: #53658d;
+}
+
+
+.card p {
+    line-height: 1.5;
+    color: #555;
+    font-size: 15px;
+}
+
+
+
+
+/* ================= BUTTON ================= */
+
+
+.card-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #53658d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+.card-button:hover {
+    background: #3f4e70;
+}
+
+
+
+
+/* ================= ABOUT ================= */
+
+
+.about {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 25px;
+}
+
+
+.about h2 {
+    text-align: center;
+    color: #53658d;
+    margin-bottom: 25px;
+}
+
+
+.about p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+
+
+/* ================= FAMILY ================= */
+
+
+.family {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+
+.family h2 {
+    color: #53658d;
+    margin-bottom: 30px;
+}
+
+
+.family-photo-container {
+    width: 500px;
+    max-width: 90%;
+    margin: 0 auto 30px;
+    padding: 10px;
+    background: #fffdf8;
+    border: 1px solid #cfc3b2;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.family-photo {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+
+.family p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+
+
+/* ================= CONTACT ================= */
+
+
+.contact {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+
+.contact h2 {
+    color: #53658d;
+    margin-bottom: 25px;
+}
+
+
+.contact p {
+    line-height: 1.8;
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+    padding: 30px 20px;
+    background: #53658d;
+    color: white;
+    text-align: center;
+}
+
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+/* ================= ALL PARAGRAPHS ================= */
+
+
+p {
+    text-align: justify;
+}
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+
+@media (max-width: 900px) {
+
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .profile-container {
+        gap: 30px;
+    }
+
+
+    .profile-image {
+        width: 300px;
+        height: 360px;
+    }
+
+
+    .profile-introduction h1 {
+        font-size: 36px;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 700px) {
+
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .profile-image {
+        width: 300px;
+        height: 350px;
+    }
+
+
+    .profile-introduction {
+        max-width: 700px;
+    }
+
+
+    .profile-introduction h1 {
+        font-size: 34px;
+    }
+
+
+    .profile-introduction p {
+        text-align: justify;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    .title-section h1 {
+        font-size: 32px;
+    }
+
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        min-height: auto;
+    }
+
+
+    .family-photo-container {
+        width: 100%;
+    }
+
+
+    .family-photo {
+        height: 280px;
+    }
+.teddy-background {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    width: 450px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.teddy-background img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.floating-heart {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    animation: floatHeart 5s linear forwards;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.spotify-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.spotify-box iframe {
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+
+}
+
+
+
